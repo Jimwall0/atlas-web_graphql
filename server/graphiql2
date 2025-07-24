@@ -1,0 +1,8 @@
+query Task {
+    task {
+        id
+        title
+        weight
+        description
+    }
+}
