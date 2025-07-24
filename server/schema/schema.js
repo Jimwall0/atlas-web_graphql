@@ -2,6 +2,7 @@ const {
   GraphQLObjectType,
   GraphQLString,
   GraphQLInt,
+  GraphQLSchema,
 } = require('graphql');
 
 const TaskType = new GraphQLObjectType({
@@ -10,7 +11,7 @@ const TaskType = new GraphQLObjectType({
     id: { type: GraphQLString },
     title: { type: GraphQLString },
     weight: { type: GraphQLInt },
-    description: { type: GraphQlString },
+    description: { type: GraphQLString },
   },
 });
 
@@ -29,6 +30,6 @@ const RootQuery = new GraphQLObjectType({
   },
 });
 
-module.exports = GraphQLSchema({
+module.exports = new GraphQLSchema({
   query: RootQuery,
 });
