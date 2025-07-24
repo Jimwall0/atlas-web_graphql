@@ -4,6 +4,7 @@ const {
   GraphQLInt,
   GraphQLSchema,
 } = require('graphql');
+const lodash = require('lodash');
 
 const TaskType = new GraphQLObjectType({
   name: 'Task',
@@ -29,6 +30,23 @@ const RootQuery = new GraphQLObjectType({
     },
   },
 });
+
+const tasks = [
+  {
+    id: '1',
+    title: 'Create your first webpage',
+    weight: 1,
+    description: 'Create your first webpage',
+    weight: 1,
+    
+  },
+  {
+    id: '2',
+    title: 'Structure your webpage',
+    weight: 1,
+    description: 'Copy the content of 0-index.html into 1-index.html Create the head and body sections inside the html tag, create the head and body tags (empty) in this order',
+  },
+]
 
 module.exports = new GraphQLSchema({
   query: RootQuery,
