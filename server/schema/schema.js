@@ -78,7 +78,7 @@ const RootQuery = new GraphQLObjectType({
     task: {
       type: TaskType,
       args: {
-        id: { type: GraphQLString },
+        id: { type: GraphQLID },
       },
       resolve(parent, args) {
         return lodash.find(tasks, { id: args.id });
