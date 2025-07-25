@@ -1,5 +1,5 @@
 query Task {
-    task {
+    task (id:2){
         id
         title
         weight
